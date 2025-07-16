@@ -1,0 +1,55 @@
+# clipboard
+clipse/
+
+# VS Code
+Code/
+
+# Cursor
+CursorIcon/
+
+# Gnome
+dconf/
+
+# Github CLI
+gh/
+
+# Grub Themes
+grub2-themes/
+
+# LibreOffice
+libreoffice/
+
+# GTK
+gtk-3.0
+gtk-4.0
+xsettingsd.conf
+
+# File Manager
+nautilus/
+Thunar/
+
+# nwg
+nwg-look/
+nwg-panel/
+
+
+# Pulse
+pulse/
+
+## sddm
+sddm/SilentSDDM/.git/
+
+# SystemD
+systemd/
+
+# Hyprland
+xdg-desktop-portal/
+
+# xfce
+xfce4/
+
+# pavucontrol
+pavucontrol.ini
+
+# Rygel
+rygel.conf

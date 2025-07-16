@@ -1,0 +1,3 @@
+[submodule "sddm/SilentSDDM"]
+	path = sddm/SilentSDDM
+	url = https://github.com/uiriansan/SilentSDDM
