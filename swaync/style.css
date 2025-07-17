@@ -1,0 +1,148 @@
+/* --- Base Variables from Waybar --- */
+:root {
+  --cc-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --cc-border: 1px solid rgba(255, 255, 255, 0.1);
+  --cc-hover-border-color: #707bfa;
+  --text-color: white;
+  --text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --border-radius: 1rem;
+  --font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+
+  /* Mapped Notification Variables */
+  --noti-border-color: rgba(255, 255, 255, 0.1);
+  --noti-bg: 48, 48, 48;
+  --noti-bg-alpha: 0;
+  --noti-bg-darker: rgb(38, 38, 38);
+  --noti-bg-hover: rgba(255, 255, 255, 0.05);
+  --noti-bg-focus: rgba(255, 255, 255, 0.1);
+  --noti-close-bg: rgb(78, 78, 78);
+  --noti-close-bg-hover: rgb(94, 94, 94);
+  --text-color-disabled: rgb(150, 150, 150);
+  --bg-selected: rgb(0, 128, 255);
+  --notification-icon-size: 64px;
+}
+
+/* --- Main Window & Control Center --- */
+.control-center,
+tooltip {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  border: var(--cc-border);
+  box-shadow: var(--box-shadow);
+  text-shadow: var(--text-shadow);
+  padding: 8px;
+  height: auto;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+/* --- Notifications --- */
+.notification-row .notification-background .notification {
+  border-radius: var(--border-radius);
+  border: var(--cc-border);
+  padding: 0;
+  background: var(--cc-bg);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.5rem;
+}
+
+.notification-row:hover .notification-background .notification {
+  border: 1px solid var(--cc-hover-border-color);
+}
+
+.notification-row .notification-background .notification .notification-default-action {
+  padding: 4px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover {
+  background: var(--noti-bg-hover);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary,
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time,
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
+  background: transparent;
+  color: var(--text-color);
+  text-shadow: var(--text-shadow);
+}
+
+/* --- Action Buttons --- */
+.close-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  border: 1px solid var(--cc-hover-border-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notification-row .notification-background .notification .notification-action>button {
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  text-shadow: var(--text-shadow);
+  margin: 4px;
+}
+
+.notification-row .notification-background .notification .notification-action>button:hover {
+  border: 1px solid var(--cc-hover-border-color);
+}
+
+.scale-trough highlight {
+  background-color: white;
+  border-radius: 12px;
+}
+
+/* --- Widgets --- */
+.widget-dnd,
+.widget-volume,
+.widget-backlight,
+.widget-slider,
+.widget-buttons-grid,
+.widget-mpris {
+  margin: 0.5rem 0;
+  color: white;
+  border-radius: 1rem;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 16px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  /* Added for blur effect */
+  backdrop-filter: blur(100px);
+}
+
+.widget-title>label {
+  margin: 8px;
+  font-size: 1.5rem;
+  text-shadow: var(--text-shadow);
+}
+
+/* Ensure placeholder text is visible */
+.control-center .control-center-list-placeholder {
+  opacity: 0.8;
+  color: var(--text-color);
+  text-shadow: var(--text-shadow);
+}

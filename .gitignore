@@ -53,3 +53,6 @@ pavucontrol.ini
 
 # Rygel
 rygel.conf
+
+# Golang
+go/
