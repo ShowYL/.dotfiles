@@ -41,7 +41,7 @@
     "custom/lock": {
         "format": " 󰍁 ",
         "tooltip": false,
-        "on-click": ""
+        "on-click": "hyprlock"
     },
     "custom/reboot": {
         "format": " 󰜉 ",
