@@ -175,3 +175,7 @@ tooltip {
 #custom-notification, #custom-updates {
     padding-right: 20px;
 }
+
+#group-system {
+    padding-right:14px;
+}

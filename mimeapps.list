@@ -1,0 +1,5 @@
+[Default Applications]
+application/pdf=zen.desktop
+
+[Added Associations]
+application/pdf=zen.desktop;

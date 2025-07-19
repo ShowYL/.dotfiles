@@ -1,0 +1,98 @@
+*{
+    blue: #707bfa;
+    light-blue: #8790fb;
+    red: #fa7970;
+    radius: 12px;
+    back: rgba(0, 0, 0, 0.7);
+    border:rgba(255, 255, 255, 0.3);
+    font: "JetBrains Mono 13";
+}
+
+window {
+    border-radius: var(radius);
+    height: 39%;
+    padding: 10px;
+    background-color: var(back);
+    border-color: var(border);
+}
+
+entry {
+    placeholder: "Search";
+    color: var(blue);
+    font: "monospace 13";
+    hide-cursor-on-empty: true;
+}
+
+listview {
+    spacing: 8px;
+    padding: 8px;
+}
+
+prompt {
+    text-color: #ffffff;
+    font: "monospace 13";
+}
+
+element {
+  padding:10px;
+  orientation: horizontal;
+  children: [ element-icon, element-text ];
+  spacing: 10px;
+}
+
+element.selected {
+    background-color: rgba(112, 123, 250, 0.15);
+    text-color: #ffffff;
+}
+
+element-icon {
+    size: 1.5em;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element normal.normal {
+    border-radius: var(radius);
+    background-color: #222222;
+    text-color: #ffffff;
+}
+element selected.normal {
+    border-radius: var(radius);
+    background-color: var(blue);
+    text-color: #ffffff;
+}
+element alternate.normal {
+    border-radius: var(radius);
+    background-color: #333333;
+    text-color: #ffffff;
+}
+
+element normal.active {
+    border-radius: var(radius);
+    background-color: var(light-blue);
+    text-color: #ffffff;
+}
+
+element alternate.active {
+    border-radius: var(radius);
+    background-color: var(light-blue);
+    text-color: #ffffff;
+}
+
+element normal.urgent {
+    border-radius: var(radius);
+    background-color: var(red);
+    text-color: #ffffff;
+}
+
+element alternate.urgent {
+    border-radius: var(radius);
+    background-color: var(red);
+    text-color: #ffffff;
+}
+
+scrollbar {
+    handle-color: var(blue);
+}
