@@ -59,12 +59,14 @@
         "format-icons": {
             "1": "",
             "2": "",
+            "3":"",
             "default": ""
         },
         "sort-by-number": true,
         "persistent-workspaces": {
             "1": [],
-            "2": []
+            "2": [],
+            "3": []
         }
     },
     "group/group-system": {

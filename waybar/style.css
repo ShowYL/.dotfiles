@@ -89,6 +89,10 @@ tooltip {
     margin-right: 1rem;
 }
 
+#clock {
+    margin-right: 2.1rem;
+}
+
 #battery.warning:not(.charging) {
     border: 2px solid #707bfa;
     color: #8790fb;
