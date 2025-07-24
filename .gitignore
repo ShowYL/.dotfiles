@@ -56,3 +56,6 @@ rygel.conf
 
 # Golang
 go/
+
+# Loc btop
+btop/btop.log
