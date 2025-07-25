@@ -4,9 +4,6 @@ clipse/
 # VS Code
 Code/
 
-# Cursor
-CursorIcon/
-
 # Gnome
 dconf/
 
@@ -59,3 +56,6 @@ go/
 
 # Loc btop
 btop/btop.log
+
+# EchoAPI
+EchoAPI/
