@@ -90,7 +90,7 @@ tooltip {
 }
 
 #clock {
-    margin-right: 2.1rem;
+    margin-right: 3.1rem;
 }
 
 #battery.warning:not(.charging) {
