@@ -32,13 +32,13 @@ length=${#HOSTNAME}
 if (( length < 15 )); then
   PROMPT="%(?..%F{red}Exit %?%f
 )
-┌─[%B${CUSTOM_BLUE}${USER} ${RESET_PROMPT} ${CUSTOM_BLUE}\$(shorten_path)${RESET_PROMPT}%b] ${CUSTOM_GRAY}\${vcs_info_msg_0_}${RESET_PROMPT}
-└> "
+  ┌─[%B${CUSTOM_BLUE}${USER} ${RESET_PROMPT} ${CUSTOM_BLUE}\$(shorten_path)${RESET_PROMPT}%b] ${CUSTOM_GRAY}\${vcs_info_msg_0_}${RESET_PROMPT}
+  └> "
 else
   PROMPT="%(?..%F{red}Exit %?%f
 )
-┌─[${CUSTOM_BLUE}${USER} ${RESET_PROMPT} ${CUSTOM_BLUE}%~${RESET_PROMPT}]  ${CUSTOM_GRAY}\${vcs_info_msg_0_}${RESET_PROMPT}
-└> "
+  ┌─[${CUSTOM_BLUE}${USER} ${RESET_PROMPT} ${CUSTOM_BLUE}%~${RESET_PROMPT}]  ${CUSTOM_GRAY}\${vcs_info_msg_0_}${RESET_PROMPT}
+  └> "
 fi
 
 # --- ANSI Color Definitions ---

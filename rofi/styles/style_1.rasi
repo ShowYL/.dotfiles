@@ -17,8 +17,8 @@ configuration {
 
 // Main //
 window {
-    height:                      500px;
-    width:                       750px;
+    height:                      590px;
+    width:                       1140px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -34,7 +34,7 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     orientation:                 horizontal;
-    children:                    [ "inputbar" , "mode-switcher" , "listbox" ];
+    children:                    [  "inputbar" , "listbox" ];
     background-color:            transparent;
     background-image:            url("~/.config/swww/wall.blur", height);
 }
@@ -43,8 +43,9 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
-    width:                       180px;
-    children:                    [ "entry" ];
+    width:                       25%;
+    children:                    [ "mode-switcher" , "entry" ];
+    background-color:            transparent;
     background-image:            url("~/.config/swww/wall.rofi", height);
 }
 entry {
@@ -57,10 +58,11 @@ mode-switcher{
     orientation:                 vertical;
     enabled:                     true;
     spacing:                     0px;
-    width:                       100px;
-    padding:                     70px 10px 70px 20px;
+    width:                       68px;
+    padding:                     160px 10px 160px 10px;
     spacing:                     25px;
     background-color:            transparent;
+    background-image:            url("~/.config/swww/wall.blur", height);
 }
 button {
     cursor:                      pointer;
@@ -76,13 +78,12 @@ button selected {
 
 // Lists //
 listbox {
-    spacing:                     5px;
-    padding:                     10px;
+    spacing:                     10px;
+    padding:                     30px;
     children:                    [ "listview" ];
-    background-color:            transparent;
+    background-color:            @main-bg;
 }
 listview {
-    padding:                     20px;
     enabled:                     true;
     columns:                     1;
     cycle:                       true;
@@ -93,9 +94,8 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            @main-bg;
+    background-color:            transparent;
     text-color:                  @main-fg;
-    border-radius:               30px;
 }
 
 
@@ -103,7 +103,7 @@ listview {
 element {
     enabled:                     true;
     spacing:                     30px;
-    padding:                     6px;
+    padding:                     8px;
     border-radius:               20px;
     cursor:                      pointer;
     background-color:            transparent;
@@ -131,3 +131,4 @@ element-text {
     background-color:            transparent;
     text-color:                  inherit;
 }
+
