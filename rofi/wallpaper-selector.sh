@@ -124,6 +124,7 @@ set_wallpaper() {
             -i "$wallpaper_path" &
     fi
 
+    wal -i "$wallpaper_path"
 }
 
 # Function to regenerate current wallpaper backgrounds
