@@ -78,8 +78,6 @@
         },
         "modules": [
             "custom/settings",
-            "cpu",
-            "temperature",
             "memory",
             "disk"
         ]
@@ -88,15 +86,6 @@
         "format": " ",
         "on-click": "nwg-look",
         "tooltip": false
-    },
-    "cpu": {
-        "interval": 2,
-        "format": " {}%  "
-    },
-    "temperature": {
-        "interval": 2,
-        "critical-threshold": 40,
-        "format": "  {temperatureC}°C "
     },
     "memory": {
         "interval": 2,

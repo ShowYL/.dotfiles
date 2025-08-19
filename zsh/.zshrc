@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls="ls -a --color=auto"
+# alias emu='QT_QPA_PLATFORM=xcb flutter emulator'

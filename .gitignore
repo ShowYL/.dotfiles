@@ -76,6 +76,9 @@ flutter/
 swww/.cache
 swww/.previews
 
+#GIMP
+GIMP/
+
 user-dirs.dirs
 create-next-app-nodejs/
 glib-2.0/
@@ -83,3 +86,8 @@ org.encroissant.app/
 swingmusic/
 mimeapps.list
 evolution/
+Google/
+github-copilot/
+menus/
+vlc/
+WhiteSur-gtk-theme/
