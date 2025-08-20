@@ -4,8 +4,7 @@
     "modules-left": [
         "group/group-power",
         "hyprland/workspaces",
-        "group/group-system",
-        "custom/updates"
+        "group/group-system"
     ],
     "modules-center": [
         "custom/notification",
@@ -16,7 +15,7 @@
         "custom/kb-layout",
         "pulseaudio",
         "bluetooth",
-        "network",
+        "tray",
         "battery"
     ],
     "group/group-power": {
@@ -95,18 +94,6 @@
         "interval": 30,
         "format": "  {specific_used:0.2f}G/{specific_total:0.2f}G  ",
         "unit": "GB"
-    },
-    "custom/updates": {
-        "exec": "bash ~/.config/waybar/scripts/checkupdates.sh",
-        "on-click": "kitty sudo dnf upgrade", // update on click
-        "interval": 900, // refresh every 15 minutes
-        "return-type": "json",
-        "format": "{icon}",
-        "format-alt": "{icon} {text}",
-        "format-icons": {
-            "has-updates": "", // icon when updates needed
-            "updated": "" // icon when all packages updated
-        }
     },
     "custom/notification": {
         "tooltip": false,
@@ -204,14 +191,8 @@
         "tooltip-format-enumerate-connected-battery": "{device_battery_percentage}%\t{device_alias}\t{device_address}",
         "on-click": "~/.config/waybar/scripts/rofi-bluetooth"
     },
-    "network": {
-        "interval": 1,
-        "format-wifi": "{signalStrength}%  ",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
-        "tooltip-format": "{essid}",
-        "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠ ",
-        "on-click": "~/.config/waybar/scripts/rofi-wifi-menu.sh"
+    "tray":{
+        "icon-size": 20
     },
     "battery": {
         "interval": 1,
