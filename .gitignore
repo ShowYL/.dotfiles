@@ -79,6 +79,9 @@ swww/.previews
 #GIMP
 GIMP/
 
+#NVIM
+nvim/lazy-lock.json
+
 user-dirs.dirs
 create-next-app-nodejs/
 glib-2.0/

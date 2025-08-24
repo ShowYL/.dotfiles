@@ -38,15 +38,50 @@ local plugins = {
   "nvim-treesitter/nvim-treesitter-context",
 
   -- LSP and Autocompletion
-  { "neovim/nvim-lspconfig", config = function() require("plugins.lsp") end },
-  "mason-org/mason.nvim",
-  "mason-org/mason-lspconfig.nvim",
-  { "hrsh7th/nvim-cmp", config = function() require("plugins.cmp") end },
-  "hrsh7th/cmp-nvim-lsp",
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-path",
-  "L3MON4D3/LuaSnip",
-  "saadparwaiz1/cmp_luasnip",
+     {
+    "mason-org/mason.nvim",
+    config = function()
+      require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "󰄬",
+            package_pending = "",
+            package_uninstalled = ""
+        }
+    }
+})
+    end
+  },
+
+  -- Bridge between Mason and lspconfig
+  {
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig", "hrsh7th/cmp-nvim-lsp" },
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "lua_ls", "ts_ls", "jdtls", "pyright", "bashls", "sqlls", "clangd",
+          "html", "cssls", "jsonls", "dartls", "gopls", "intelephense", "svelte"
+        },
+        automatic_installation = true,
+      })
+    end
+  },
+
+  -- LSP Configuration
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = { "mason-org/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp" },
+    config = function()
+            require("plugins.lsp")
+        end
+    },
+    { "hrsh7th/nvim-cmp", config = function() require("plugins.cmp") end },
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip",
 
   -- Harpoon
   {
