@@ -58,24 +58,9 @@ local plugins = {
     "mason-org/mason-lspconfig.nvim",
     dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig", "hrsh7th/cmp-nvim-lsp" },
     config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls", "ts_ls", "jdtls", "pyright", "bashls", "sqlls", "clangd",
-          "html", "cssls", "jsonls", "dartls", "gopls", "intelephense", "svelte"
-        },
-        automatic_installation = true,
-      })
+            require("plugins.lsp")
     end
   },
-
-  -- LSP Configuration
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = { "mason-org/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp" },
-    config = function()
-            require("plugins.lsp")
-        end
-    },
     { "hrsh7th/nvim-cmp", config = function() require("plugins.cmp") end },
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
