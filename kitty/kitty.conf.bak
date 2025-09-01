@@ -1,7 +1,7 @@
-# font_family JetBrainsMonoNL Nerd Font
-# bold_font JetBrainsMonoNL Nerd Font Bold
-# italic_font JetBrainsMonoNL Nerd Font Italic
-# bold_italic_font JetBrainsMonoNL Nerd Font Bold Italic
+font_family JetBrainsMonoNL Nerd Font
+bold_font JetBrainsMonoNL Nerd Font Bold
+italic_font JetBrainsMonoNL Nerd Font Italic
+bold_italic_font JetBrainsMonoNL Nerd Font Bold Italic
 
 # Font size
 font_size 11.0
@@ -32,11 +32,3 @@ enable_audio_bell no
 allow_remote_control yes
 
 include colors-kitty.conf
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMono Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS

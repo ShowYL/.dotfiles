@@ -5,7 +5,6 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- Common on_attach function for keymaps
 local on_attach = function(client, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
-    -- vim.keymap.del("n", "K", { buffer = bufnr })
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
