@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 -- [[ Plugin Specifications ]]
 local plugins = {
   -- Theme
-  { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {} },
+    {require("plugins.theme.rose-pine")},
 
   -- Fuzzy Finder
   {
@@ -84,6 +84,3 @@ local plugins = {
 
 local opts = {}
 require("lazy").setup(plugins, opts)
-
--- Set the colorscheme after lazy.nvim has loaded the plugin
-vim.cmd.colorscheme "tokyonight-night"

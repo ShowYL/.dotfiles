@@ -1,0 +1,21 @@
+{
+    "label" : "lock",
+    "action" : "hyprlock",
+    "keybind" : "l"
+}
+{
+    "label" : "reboot",
+    "action" : "reboot",
+    "keybind" : "r"
+}
+
+{
+    "label" : "logout",
+    "action" : "hyprctl dispatch exit",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "shutdown now",
+    "keybind" : "s"
+}
