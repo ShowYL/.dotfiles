@@ -1,6 +1,5 @@
-local lspconfig = require("lspconfig")
+-- Updated LSP configuration using vim.lsp.config (Neovim 0.11+)
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 
 -- Common on_attach function for keymaps
 local on_attach = function(client, bufnr)
@@ -14,36 +13,38 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 end
 
--- List of servers
 local servers = {
-    lua_ls = {
-        settings = {
-            Lua = {
-                diagnostics = { globals = { "vim" } }
-            }
-        }
-    },
-    ts_ls = {},
-    jdtls = {},
-    pyright = {},
-    bashls = {},
-    sqlls = {},
-    clangd = {},
-    html = {},
-    cssls = {},
-    jsonls = {},
-    dartls = {},
-    gopls = {},
-    intelephense = {},
-    svelte = {},
+    'ts_ls',
+    'jdtls',
+    'pyright',
+    'bashls',
+    'sqlls',
+    'clangd',
+    'html',
+    'cssls',
+    'jsonls',
+    'dartls',
+    'gopls',
+    'intelephense',
+    'svelte',
 }
 
--- Configure each server
-for server_name, server_opts in pairs(servers) do
-    lspconfig[server_name].setup({
-        capabilities = capabilities,
-        on_attach = on_attach,
-        settings = server_opts.settings or {},
-    })
-end
+vim.lsp.config('lua_ls', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            diagnostics = { globals = { "vim" } }
+        }
+    }
+})
 
+for _, server in ipairs(servers) do
+    if server ~= 'lua_ls' then  -- already configured above
+        vim.lsp.config(server, {
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+    end
+    vim.lsp.enable(server)
+end
